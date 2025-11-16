@@ -1,4 +1,4 @@
-### 🚗 CareDrive Duo
+# 🚗 CareDrive Duo
 
 Bienvenue sur CareDrive Duo — Solution intelligente d’assistance et de monitoring pour conducteurs vulnérables.
 
