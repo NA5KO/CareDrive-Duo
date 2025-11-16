@@ -1,14 +1,14 @@
-🚗 CareDrive Duo
+### 🚗 CareDrive Duo
 
 Bienvenue sur CareDrive Duo — Solution intelligente d’assistance et de monitoring pour conducteurs vulnérables.
 
 Ce dépôt contient une solution prototype composée de deux applications mobiles connectées visant à améliorer la sécurité routière des conducteurs vulnérables (personnes âgées, handicap, etc.) tout en préservant leur autonomie.
 
-## Pitch (en une phrase)
+## Overview
 
 CareDrive Duo détecte les comportements à risque et les incidents à l'aide des capteurs du smartphone, alerte les proches et facilite l'intervention rapide — avec consentement et respect de la vie privée.
 
-## Pourquoi ce projet (Hackathon)
+## Pourquoi ce projet
 
 - Problème : les conducteurs vulnérables peuvent perdre en sécurité sans perdre en autonomie.
 - Solution : un duo d'applications — une installée sur le téléphone du conducteur (détection, alertes) et une pour le proche (monitoring, actions d'urgence).
@@ -30,7 +30,7 @@ CareDrive Guardian (application du proche)
 - Possibilité d'appeler les services d'urgence ou d'envoyer de l'assistance
 - Demande d'accès caméra temporaire (avec approbation du conducteur)
 
-## Prototype / Architecture (vue synthétique)
+## Prototype / Architecture 
 
 Smartphone (Conducteur)  <=>  Backend sécurisé (WebSocket / REST)  <=>  Smartphone (Proche)
 
