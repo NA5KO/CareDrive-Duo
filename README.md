@@ -1,102 +1,106 @@
-🚗 CareDrive Duo – README
-🧠 CareDrive Senior & CareDrive Guardian
+🚗 CareDrive Duo
 
-Solution intelligente de sécurité routière pour conducteurs vulnérables
+Smart Road Safety for Vulnerable Drivers
 
-📘 Description du projet
+🧠 Overview
 
-CareDrive Duo est une double application mobile dédiée à la protection des conducteurs âgés, fragiles ou présentant des besoins spécifiques.
-Elle exploite uniquement les capteurs d’un smartphone pour analyser le comportement de conduite, détecter les risques et alerter un proche de confiance en temps réel.
+CareDrive Duo is a dual-application mobile safety solution designed to protect elderly and vulnerable drivers.
+Using only smartphone sensors, it detects risky behaviors, identifies fatigue, monitors navigation, and alerts a trusted person in real-time.
 
-🎯 Mission : Maintenir l’autonomie des conducteurs tout en renforçant la sécurité et la réactivité d’intervention.
+This project consists of two connected applications:
 
-🛑 Problématique
+App	Role
+📱 CareDrive Senior	Installed on driver’s phone — risk detection & emergency alerts
+🧑‍🦳 CareDrive Guardian	Monitoring app for trusted family member or caregiver
+🎯 Objectives
 
-Les conducteurs vulnérables peuvent être sujets à :
+Improve driver safety without reducing autonomy
 
-baisse de vigilance & fatigue 💤
+Alert a guardian in case of accident or abnormal behavior
 
-difficultés de navigation ou désorientation 🗺
+Enable fast intervention (emergency services, police…)
 
-mauvaise gestion de la vitesse 🚧
+Provide non-intrusive monitoring with consent
 
-malaises ou incidents soudains 🆘
+🧩 Features
+🔹 CareDrive Senior (Driver App)
 
-accidents sans témoin ou intervention rapide 🚑
+🚦 Speed monitoring (GPS vs speed limits)
 
-👪 Les familles cherchent un moyen de rester rassurées sans surveillance intrusive.
+🛣 Route deviation detection
 
-🏁 Vision & Bénéfices
+💤 Fatigue identification (camera-based: micro-sleep, prolonged eye closure…)
 
-✔ Sécurité proactive et continue
-✔ Notification immédiate au proche en cas d’incident
-✔ Intervention rapide (secours, police, remorquage)
-✔ Respect total de l’autonomie & consentement
-✔ Réduction potentielle du risque d’accidents pour assurances
+💥 Crash / sudden stop detection (accelerometer + gyroscope)
 
-🧱 Architecture Générale
+🚨 Intelligent alerts:
 
-Deux applications connectées ensemble via un serveur sécurisé :
+⚠️ Warning alerts (risk detected)
 
-📱 CareDrive Senior (Conducteur)
-⇄ Backend Sécurisé (WebSocket + API) ⇄
-👨‍👩‍👦 CareDrive Guardian (Proche / Aidant)
+🚨 Critical alerts (accident, non-responsive driver)
 
-📍 Fonctionnalités
-🔹 CareDrive Senior (App Conducteur)
-Domaine	Fonctionnalités
-Détection des risques	vitesse excessive, déviations, arrêts fréquents
-Fatigue & vigilance	analyse visage (MediaPipe) : micro-sommeil, yeux fermés
-Accidents & chocs	accéléromètre + gyroscope
-Alertes intelligentes	⚠️ modérées / 🚨 critiques
-Actions d’urgence	appel automatique + GPS + vidéo
-Vie privée maîtrisée	permissions configurables
-🔹 CareDrive Guardian (App Proche)
-Module	Fonctionnalités
-Suivi en direct	position GPS, vitesse, batterie
-Vérification visuelle	accès caméras avec autorisation
-Boutons d'assistance	🚑 ambulance / 🚓 police / 🔧 dépannage
-Communication	appel direct / guidage vers position
-Historique	journal des alertes & incidents
-🧠 Détection & Analyse
-Capteur Mobile	Rôle
-GPS	vitesse, trajectoire, déviation
-Caméra frontale	vigilance conducteur
-Caméra arrière	contexte accident
-Accéléromètre/Gyroscope	collision, freinage brusque
-Micro (optionnel)	suspicion de malaise
-Horloge	conduite nocturne, risque accru
+🎥 Secure streaming/video recording during incidents
 
-➡️ IA embarquée → calcul d’un score de risque dynamique
+🔐 Privacy control with user consent
 
-🏗 Architecture Technique
+🔹 CareDrive Guardian (Family/Caregiver App)
 
-Mobile Apps : Android / iOS (stack à définir : Flutter ou React Native recommandé)
+📍 Real-time location & status (speed, movement, battery)
 
-Communication temps réel : WebSocket
+👁 Remote visual confirmation (front/back camera — with driver approval)
 
-Backend : API + stockage chiffré
+🆘 Emergency actions:
 
-Analyse IA : MediaPipe + règles métier
+🚑 Call ambulance
 
-🚀 Roadmap
-Phase	Durée	Livrables
-Phase 1	3–5 jours	UI/UX + tracking GPS + communication base
-Phase 2	5–7 jours	fatigue + arrêts + monitoring proche
-Phase 3	Finalisation	urgences, enregistrements vidéo, tests réels
-🔐 Confidentialité & Consentement
+🚓 Contact police
 
-Autorisation explicite pour chaque capteur
+🔧 Road assistance
 
-Accès caméra accepté par le conducteur (sauf situation critique)
+📞 Direct call / Navigation to driver
 
-Données chiffrées et minimisées
+📜 Alert & incident history
 
-Respect total du RGPD
+🧠 Technology & Sensors
+Component	Purpose
+GPS	Speed, routing, position tracking
+Cameras (front/back)	Fatigue detection & accident recording
+Accelerometer / Gyroscope	Collision + abnormal motion detection
+Microphone (optional)	Health/attention assessment
+WebSocket	Real-time messaging
+Backend API	Secure data storage & alerts
 
-👥 Contribution
+👁‍🗨 AI Embedded: MediaPipe + rule-based anomaly detection
 
-Contributions ouvertes 🎯
-Créer une issue ou une pull request pour proposer des ajouts ou correctifs.
+🏗 System Architecture
+📱 CareDrive Senior App
+   ⇅  (WebSocket + Secure API)
+☁️ Backend Server — Real-Time Event Management
+   ⇅
+👨‍👩‍👦 CareDrive Guardian App
 
-📄 Licence
+🚀 Development Roadmap
+Phase	Features	Status
+1. Base Platform (3–5 days)	UI/UX + GPS tracking + WebSocket	⏳ Planned
+2. Risk Monitoring (5–7 days)	Fatigue detection + guardian dashboard + camera access	⏳
+3. Emergency Management	Video recording + survival timers + alert history + real tests	⏳
+🔐 Privacy & Ethical Design
+
+No tracking without explicit driver consent
+
+Camera access never hidden
+
+Auto-permissions only during a confirmed accident
+
+Data encrypted & minimal collection
+
+➡ Supports families without disrupting driver independence
+
+📄 License
+
+To be defined (MIT/Apache-2.0 recommended)
+
+👥 Contributing
+
+Pull requests are welcome!
+Please open an Issue for major changes or feature proposals.
