@@ -34,7 +34,7 @@ CareDrive Guardian (application du proche)
 
 Smartphone (Conducteur)  <=>  Backend sécurisé (WebSocket / REST)  <=>  Smartphone (Proche)
 
-- Composants typiques : GPS, caméras, accéléromètre/gyroscope, microphone (optionnel)
+- Composants typiques : GPS, caméras, accéléromètre/gyroscope, microphone 
 - Transport temps réel : WebSocket / MQTT
 - Traitement local : détection embarquée + règles (préserver la vie privée)
 - Backend : gestion d'événements, journal d'alertes, authentification
@@ -42,10 +42,10 @@ Smartphone (Conducteur)  <=>  Backend sécurisé (WebSocket / REST)  <=>  Smartp
 ## Technologies envisagées
 
 - Mobile : Flutter ou React Native (prototype multi-plateforme)
-- Backend : Node.js / Python (FastAPI) ou autre selon l'équipe
+- Backend : Node.js / Python (FastAPI)
 - IA / Vision : MediaPipe / modèles légers pour détection d'yeux/visage
 - Communication temps réel : WebSocket
-- Stockage : base légère (Postgres / Firebase) selon besoin
+- Stockage : base légère (Postgres / Firebase)
 
 > Remarque : le dépôt actuel est un prototype conceptuel —
 
